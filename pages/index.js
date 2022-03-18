@@ -7,8 +7,8 @@ export default function Index({ data }) {
     <section>
       <h1>Stadionlar</h1>
       {data.length > 0 &&
-        data.map((p) => {
-          return <p>{p.title}</p>;
+        data.map((p, index) => {
+          return <p key={index}>{p.title}</p>;
         })}
     </section>
   );
